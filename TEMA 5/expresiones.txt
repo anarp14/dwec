@@ -1,0 +1,36 @@
+Validación de correo electrónico: ^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`
+Validación de contraseñas (al menos 1 letra mayúscula, 1 minúscula y 1 número): ^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$`
+Validación de fecha (dd/mm/yyyy): ^(0[1-9]|1[0-9]|2[0-9]|3[01])/(0[1-9]|1[012])/[0-9]{4}$`
+Validación de número de teléfono (formato E.164): ^\+[1-9]\d{1,14}$`
+Validación de número de tarjeta de crédito: ^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$`
+
+
+Validación de nombre (solo letras): ^[a-zA-Z ]+$`
+Validación de número entero positivo: ^[1-9]\d*$`
+Validación de número decimal: ^[+-]?[0-9]*\.?[0-9]+([eE][+-]?[0-9]+)?$`
+Validación de URL: ^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$`
+Validación de código postal: ^\d{5}(-\d{4})?$`
+Validación de hora (HH:MM): ^([01]\d|2[0-3]):([0-5]\d)$`
+
+Validación de fecha en formato americano (mm/dd/yyyy): ^(0[1-9]|1[012])[/](0[1-9]|[12][0-9]|3[01])[/](19|20)\d{2}$`
+Validación de número de seguridad social: ^\d{3}-\d{2}-\d{4}$`
+Validación de dirección IP: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$`
+Validación de nombre de usuario (solo letras, números y subrayado): ^[a-zA-Z0-9_]+$`
+Validación de ISBN: ^(?:ISBN(?:-1[03])?:?\ )?(?=[0-9X]{10}$|(?=(?:[0-9]+[-\ ]){3})[-\ 0-9X]{13}$|97[89][-\ ]?[0-9]{10}$|(?=(?:[0-9]+[-\ ]){4})[-\ 0-9]{17}$)(?:97[89][-\ ]?)?[0-9]{1,5}[-\ ]?[0-9]+[-\ ]?[0-9]+[-\ ]?[0-9X]$`
+
+
+
+Validación de número de pasaporte: ^[A-Z]{2}[0-9]{7}$`
+Validación de número de placa de vehículo: ^[A-Z]{3}-[0-9]{4}$`
+Validación de código de barras: ^\d{12,14}$`
+Validación de número de identificación fiscal: ^\d{9}$`
+Validación de fecha en formato ISO: ^\d{4}-\d{2}-\d{2}$`
+
+
+
+
+DNI: "^[0-9]{2}.[0-9]{3}.[0-9]{2}-[A-Z]$"
+NOMBRE (al menos un nombre y apellido y max dos de cada): "/^[a-zA-Z]+\s[a-zA-Z]+(\s[a-zA-Z]+){0,2}$/"
+FECHA: "/^([0-2][0-9]|[3][01])\/([0][0-9]|[1][1-2])\/([0-9]{4})$/"
+EMAIL: "^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+PAG WEB: "^http://www.[A-Za-z0-9]+.[a-z]+$"

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="act8-11.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <form action="mailto:example@email.com" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <label for="name">Introduce tu nombre: </label>
+            <input type="text" name="name" id="name"><br>
+            <label for="msj">Mensaje</label><br>
+            <textarea name="msj" id="msj" cols="50" rows="5"></textarea>
+        </fieldset>
+        <label for="color">Elige un color</label><br>
+        <input type="radio" name="color" id="red" onclick="updateColor(this)">
+        <label for="red">Rojo</label><br>
+        <input type="radio" name="color" id="green" onclick="updateColor(this)">
+        <label for="green">Verde</label><br>
+        <input type="radio" name="color" id="blue" onclick="updateColor(this)">
+        <label for="blue">Azul</label><br><br>
+
+        <label for="asig">Selecciona una asignatura:</label>
+        <select name="asig" id="asig">
+            <option value="0" disabled selected hidden>Asignatura</option>
+            <option value="1">Diseño</option>
+            <option value="2">Cliente</option>
+            <option value="3">Servidor</option>
+        </select>
+
+        <p>Seleccione los días con disponibilad: </p>
+        <input type="checkbox" name="monday" id="l" onclick="updateDay(this)">
+        <label for="monday">Lunes</label><br>
+        <input type="checkbox" name="tuesday" id="2" onclick="updateDay(this)">
+        <label for="tuesday">Martes</label><br>
+        <input type="checkbox" name="wednesday" id="3" onclick="updateDay(this)">
+        <label for="wednesday">Miércoles</label><br>
+        <input type="checkbox" name="thursday" id="4" onclick="updateDay(this)">
+        <label for="thursday">Jueves</label><br>
+        <input type="checkbox" name="friday" id="5" onclick="updateDay(this)">
+        <label for="friday">Viernes</label><br>
+        <input type="checkbox" name="saturday" id="6" onclick="updateDay(this)">
+        <label for="saturday">Sábado</label><br>
+        <input type="checkbox" name="sunday" id="7" onclick="updateDay(this)">
+        <label for="sunday">Domingo</label><br>
+        <input type="hidden" name="preferredDay" id="preferredDay">
+
+        <button type="submit">Haz click para enviar información</button>
+        <button type="reset">Comenzar a rellenar de nuevo</button>
+        <button>
+            <a href="https://www.google.es">Haz click sobre mi</a>
+        </button>
+
+    </form>
+    <script>
+        function updateMail() {
+    var select = document.getElementById("asig");
+    var mail;
+    if (select.value == "1") {
+        mail = "diseño@email.com";
+    } else if (select.value == "2") {
+        mail = "cliente@email.com";
+    } else if (select.value == "3") {
+        mail = "servidor@email.com";
+    }
+    document.getElementById("form").action = "mailto:" + mail;
+}
+
+
+function updateColor(color) {
+    document.body.style.backgroundColor = color.id;
+    /*
+    if (color.id == "red") {
+    document.body.style.backgroundColor = "red";
+    } else if (color.id == "green") {
+        document.body.style.backgroundColor = "green";
+    } else if (color.id == "blue") {
+        document.body.style.backgroundColor = "blue";
+    }
+    */
+}
+    </script>
+</body>
+</html>
