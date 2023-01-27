@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+
+<img src="perro.jeje" id="foto1" alt="Foto de un perrete">
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var image = document.getElementById("foto1");
+
+    //La imagen no se ha cargado por un error
+    image.addEventListener("error", imageError);
+
+    //La imagen no se ha cargado porque el usuario lo ha detenido
+    image.addEventListener("abort", imageAbort);
+
+    function imageError() {
+        image.alt = "Error al cargar la imagen";
+    }
+    //
+    function imageAbort() {
+       image.alt = "Error al cargar la imagen";
+    }
+})
+
+</script>
+</body>
+</html>

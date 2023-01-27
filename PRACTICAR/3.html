@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+↓ INSTRUCCIONES DEL EJERCICIO ↓
+Cuando pulse con el boton del raton en cualquier sitio de la pantalla, identifique si ha pulsado el boton derecho, izquierdo o central.
+-->
+
+<body>
+<script>
+    document.addEventListener('mousedown',pulsar);
+    function pulsar(e){
+        if (e.button == 0){
+            alert("Has pulsado el boton izquierdo");
+        }
+        if (e.button == 1){
+            alert("Has pulsado el boton central");
+        }
+        if (e.button == 2){
+            alert("Has pulsado el boton derecho");
+        }
+    }
+</script>
+</body>
+</html>

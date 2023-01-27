@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 10</title>
+    <style>
+      fieldset {
+          width: fit-content ;
+      }
+  </style>
+
+  </head>
+
+  <body>
+    <form action="mailto:example@email.com" method="post" enctype="text/plain" id="formulario">
+      <fieldset>
+        <legend>Datos personales</legend>
+        <label>
+          Introduce tu nombre:
+          <input type="text" name="nombre" value="" />
+        </label> <br>
+        <label>
+          Mensaje: <br />
+          <textarea name="texto" rows="5" cols="60"></textarea>
+      </fieldset>
+    </label> <br>
+    <label>
+        Elige un color: <br>
+        <input type="radio" name="color" value="red" onclick="cambiar_fondo(value)"> Rojo <br>
+        <input type="radio" name="color" value="green" onclick="cambiar_fondo(value)"> Verde <br>
+        <input type="radio" name="color" value="blue" onclick="cambiar_fondo(value)"> Azul
+    </label> <br> <br>
+    <label>
+        Selecciona una asignatura:
+        <select name="asignatura" id="asignatura">
+            <option value="0" disabled selected hidden>Asignatura</option>
+            <option value="1">Matematicas</option>
+            <option value="2">Lengua</option>
+            <option value="3">Inglés</option>
+        </select>
+    </label> <br><br>
+    <p>Seleccione los días con disponibilad: </p>
+      <input class="dias" type="checkbox" value="lunes" id="l" onclick="Dia_Preferente(value)">
+      <label for="lunes">Lunes</label><br>
+      <input class="dias" type="checkbox" value="martes" id="2" onclick="Dia_Preferente(value)">
+      <label for="martes">Martes</label><br>
+      <input class="dias" type="checkbox" value="miercoles" id="3" onclick="Dia_Preferente(value)">
+      <label for="miercoles">Miércoles</label><br>
+      <input class="dias" type="checkbox" value="jueves" id="4" onclick="Dia_Preferente(value)">
+      <label for="jueves">Jueves</label><br>
+      <input class="dias" type="checkbox" value="viernes" id="5" onclick="Dia_Preferente(value)">
+      <label for="viernes">Viernes</label><br>
+
+
+        Selecciona el día preferente:
+        <select name="dia_preferente" id="dia_preferente">
+            <option value="0" disabled selected hidden>Día</option>
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+        </select>
+    </label> <br><br>
+    <button type="submit">Haz cliz para enviar información</button>
+    <button type="reset">Comenzar a rellenar de nuevo</button>
+    <button><a href="https://www.google.es">Haz cliz sobre mi</a></button>
+
+    </form>
+  </body>
+  <script src="ej10.js"></script>
+</html>

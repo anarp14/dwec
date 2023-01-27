@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--
+↓ INSTRUCCIONES DEL EJERCICIO ↓
+Realizar un evento que muestre la url que tiene asociada cada imagen, cada vez que se pase el ratón por encima de ella.
+-->
+
+<body>
+<script>
+    function verPosicion(e){
+        ancho = window.innerWidth;
+        alto = window.innerHeight;
+
+        alert("El ancho y alto es: " + ancho +" y "+ alto);
+    }
+    window.onresize = verPosicion;
+</script>
+</body>
+</html>

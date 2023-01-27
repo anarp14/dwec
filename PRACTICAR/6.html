@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+ document.addEventListener('mousedown',function(){
+    document.getElementById("foto1").src= "gato.jpg";
+ });
+ document.addEventListener('mouseup',function(){
+    document.getElementById("foto1").src= "perro.jpg";
+ });
+
+</script>
+<img src="perro.jpg" id="foto1" alt="Foto de un perrete">
+</body>
+</html>
