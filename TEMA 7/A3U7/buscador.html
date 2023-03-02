@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="data:,">
+  <title>Buscador ciudades</title>
+<script>
+function muestraSugerencia(str) {
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("txtSugerencia").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","buscador_ciudades.php?ciudad="+str,true);
+  xmlhttp.send();
+}
+</script>
+</head>
+<body>
+
+<h3>Escribe el nombre de alguna ciudad dónde quieres ir:</h3>
+<form>
+Ciudad: <input type="text" onkeyup="muestraSugerencia(this.value)"><br>
+
+<p>Sugerencias: <span id="txtSugerencia"></span> </p>
+</form>
+
+
+</body>
+</html>
+
+
+
