@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+  // La función getVote  utiliza la objeto XMLHttpRequest 
+function getVote(int) {
+  var xmlhttp=new XMLHttpRequest();
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("poll").innerHTML=this.responseText;
+    }
+  }
+  xmlhttp.open("GET","encuesta_voto.php?vote="+int,true);
+  xmlhttp.send();
+}
+</script>
+<style>
+  table {
+    font-family: arial, sans-serif;
+  }
+    
+  h3,h2,form,p{
+    text-align: center;
+  }
+  
+  td, th {
+    border: 1px solid #8e93ca;
+    padding: 8px;
+  }
+
+  </style>
+  
+</head>
+<body>
+  <!-- Al hacer clic en una opción, se llama a la función getVote y se pasa el valor seleccionado como argumento. -->
+<div id="poll">
+<h3>¿Quién crees que va a ganar la liga?</h3>
+<form >
+Real Madrid: <input type="radio" name="vote" value="0" onclick="getVote(this.value)"><br>
+Barcelona: <input type="radio" name="vote" value="1" onclick="getVote(this.value)"><br>
+Atlético de Madrid: <input type="radio" name="vote" value="2" onclick="getVote(this.value)"><br>
+Sevilla: <input type="radio" name="vote" value="3" onclick="getVote(this.value)">
+</form>
+</div>
+
+
+</body>
+</html>
